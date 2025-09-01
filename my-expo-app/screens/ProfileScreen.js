@@ -5,8 +5,10 @@ import {
   StyleSheet,
   TouchableOpacity,
   ScrollView,
+  Image,
 } from "react-native";
 import { useAppContext } from "../contexts/AppContext";
+import profile from "../assets/profile.png";
 
 export default function ProfileScreen({ navigation }) {
   const { state } = useAppContext();
@@ -26,7 +28,7 @@ export default function ProfileScreen({ navigation }) {
             state.theme === "dark" ? styles.darkText : styles.lightText,
           ]}
         >
-          John Doe
+          Prágai Dominik
         </Text>
         <Text
           style={[
@@ -34,8 +36,12 @@ export default function ProfileScreen({ navigation }) {
             state.theme === "dark" ? styles.darkText : styles.lightText,
           ]}
         >
-          Senior Software Developer
+          2nd Year Computer Science Student
         </Text>
+      </View>
+
+      <View style={styles.imageContainer}>
+        <Image source={profile} style={styles.profileImage} />
       </View>
 
       <View style={styles.section}>
@@ -45,7 +51,7 @@ export default function ProfileScreen({ navigation }) {
             state.theme === "dark" ? styles.darkText : styles.lightText,
           ]}
         >
-          About Me
+          About myself
         </Text>
         <Text
           style={[
@@ -53,9 +59,8 @@ export default function ProfileScreen({ navigation }) {
             state.theme === "dark" ? styles.darkText : styles.lightText,
           ]}
         >
-          Passionate software developer with 5+ years of experience in building
-          scalable web and mobile applications. Specialized in React Native,
-          JavaScript, and modern web technologies.
+          In School with little experience and some high school experinece to go
+          with in all things its about 2.5 years of studying and some work.
         </Text>
       </View>
 
@@ -74,9 +79,9 @@ export default function ProfileScreen({ navigation }) {
             state.theme === "dark" ? styles.darkText : styles.lightText,
           ]}
         >
-          • Senior Developer at TechCorp (2022-Present)
-          {"\n"}• Full Stack Developer at StartupXYZ (2020-2022)
-          {"\n"}• Junior Developer at WebSolutions (2019-2020)
+          • all time experience (2021-Present)
+          {"\n"}• VTS experience(2023-2025)
+          {"\n"}• highschool experinece(2021-2023)
         </Text>
       </View>
 
@@ -87,7 +92,7 @@ export default function ProfileScreen({ navigation }) {
             state.theme === "dark" ? styles.darkText : styles.lightText,
           ]}
         >
-          Skills
+          Hobbys
         </Text>
         <Text
           style={[
@@ -95,27 +100,7 @@ export default function ProfileScreen({ navigation }) {
             state.theme === "dark" ? styles.darkText : styles.lightText,
           ]}
         >
-          React Native • JavaScript • TypeScript • Node.js • Python • AWS • Git
-          • CI/CD
-        </Text>
-      </View>
-
-      <View style={styles.section}>
-        <Text
-          style={[
-            styles.sectionTitle,
-            state.theme === "dark" ? styles.darkText : styles.lightText,
-          ]}
-        >
-          Education
-        </Text>
-        <Text
-          style={[
-            styles.sectionContent,
-            state.theme === "dark" ? styles.darkText : styles.lightText,
-          ]}
-        >
-          Bachelor of Computer Science - University of Technology (2015-2019)
+          Football and fixing PCs
         </Text>
       </View>
 
@@ -134,11 +119,9 @@ export default function ProfileScreen({ navigation }) {
             state.theme === "dark" ? styles.darkText : styles.lightText,
           ]}
         >
-          Email: john.doe@example.com
+          Email: dominikpragai17@gmail.com
           {"\n"}
-          Phone: +1 (555) 123-4567
-          {"\n"}
-          LinkedIn: linkedin.com/in/johndoe
+          Phone: 064 ***
         </Text>
       </View>
     </ScrollView>
@@ -193,6 +176,17 @@ const styles = StyleSheet.create({
   sectionContent: {
     fontSize: 16,
     lineHeight: 22,
+  },
+  imageContainer: {
+    alignItems: "center",
+    marginBottom: 20,
+  },
+  profileImage: {
+    width: 120,
+    height: 120,
+    borderRadius: 60,
+    borderWidth: 3,
+    borderColor: "#5856D6",
   },
   info: {
     fontSize: 18,
